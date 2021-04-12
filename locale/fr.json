@@ -1,0 +1,76 @@
+{
+    "navbar": {
+        "translate-button": "FR",
+        "signup": "S'inscrire",
+        "login": "S'identifier",
+        "logout": "Se déconnecter",
+        "link":"Lien"
+    },
+
+    "section1": {
+        "heading": "Rendre l'original vraiment unique",
+        "heading-para": "Des documents élégants et sécurisés pour certifier l’œuvre d’art originale.",
+        "heading-para1": "Lancement progressif avril 2021!",
+        "heading-button":"Découvrir"
+    },
+
+    "services": {
+        "card1": "Artistes",
+        "card1-para": "Le Certificat d'Authenticité offre une protection solide à long terme pour vos créations. Vous gardez le contrôle et vous décidez avec flexibilité de vos éditions physiques ou digitales : original unique, tirage limité en N exemplaires numérotés, droits de reproduction pour les oeuvres digitales, oeuvres cryptographiques NFT.",
+        "card2": "Collectionneurs",
+        "card2-para": "Le Certificat d'Expertise sécurise vos collections avec des documents signés physiquement et électroniquement par les meilleurs experts du marché. Les collectionneurs en crypto-art peuvent faire une copie de sauvegarde de leurs NFTs Ethereum ERC721 ou ERC1155.",
+        "card3": "Musées",
+        "card3-para": "Le Certificat d'Inventaire sécurise la conservation à des collections physiques, avec une sauvegarde à long terme des reproductions numériques. Le processus de récolement est plus transparent, facilité par la dissémination de méta-données en open-data."
+    },
+
+    "works": {
+        "heading": "Comment ça marche ?",
+        "sec1": "Créez votre compte",
+        "sec1-para": "Créez un compte avec votre nom d'artiste. Ajoutez optionnellement votre adresse blockchain.",
+        "sec2": "Versez le fichier source",
+        "sec2-para": "Versez le fichier source haut-définition de votre oeuvre pour la conservation long-terme dans IPFS.",
+        "sec3": "Créez l'édition",
+        "sec3-para": "Créez votre édition d'art : original unique physique, édition limitée ou art cryptographique (NFT).",
+        "sec4": "Poinçonnez la blockchain",
+        "sec4-para": "Nous fabriquons pour vous un actif unique (NFT) dans la blockchain, et vous recevez par courrier le certificat PDF.",
+        "sec5": "Sécurisez le certificat",
+        "sec5-para": "Coupez avec les ciseaux, collez et signez le chirographe pour authentifier chaque copie du certificat et envoyez nous une copie double par courrier."
+    },
+
+    "certificate": {
+        "heading":"Certificat et chirographe",
+        "heading-para":"Nos certificats sont des documents légaux préparé par un avocat spécialisé en propriété intellectuelle, imprimés en quatre exemplaires, sécurisés par un chirographe avec QR code et identifiants cryptographiques dans la blockchain.",
+        "Button": "Lire la suite"
+    },
+
+    "about": {
+        "heading":"A propos",
+        "heading-para":"UNCOPIED est une 'spin-off' de NAMSOR SAS, société française basée à Versailles, France. Le code open source et l'infrastructure IPFS sont maintenus par le collectif UNCOPIED."
+    },
+  
+    "contact": {
+        "heading": "Nous contacter",
+        "form1": "Nom",
+        "form2": "Email",
+        "form3": "Écrire un message",
+        "button": "Discutons-en!"
+    },
+    
+    "footer": {
+        "heading1": "Rendre l'original vraiment unique",
+        "heading2": "Liens utiles",
+        "heading3": "Suivez nous",
+        "heading2-link1": "Maison",
+        "heading2-link2": "Blog",
+        "heading2-link3": "Nos services",
+        "heading2-link4": "Pourquoi Uncopied?",
+        "heading2-link5": "Le collectif",
+        "heading2-link6": "Nous contacter",
+        "copyright": "Copyright © 2021, tous droits réservés"
+    },
+
+    "error": {
+        "heading":"Désolé, page introuvable !!!",
+        "button": "Retourner"
+    }
+}

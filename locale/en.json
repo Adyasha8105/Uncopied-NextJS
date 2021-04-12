@@ -1,0 +1,77 @@
+{
+    "navbar": {
+        "translate-button": "EN",
+        "signup": "Sign Up",
+        "login": "Login",
+        "logout": "Logout",
+        "link":  "Link"
+    },
+
+    "section1": {
+        "heading": "Making original truly unique",
+        "heading-para": "Elegant and digitally immutable certificates of authenticity for the original artwork.",
+        "heading-para1": "Soft launch April 2021!",
+        "heading-button":"Discover"
+    },
+    
+    "services": {
+        "card1": "Artists",
+        "card1-para": "The Certificate of Authenticity (CoA) offers strong long term protection for your intellectual property. You gain control and decide with maximum flexibility on creating physical or digital editions of your artworks (single original edition, limited edition of original prints, digital prints or non fungible tokens NFTs).",
+        "card2": "Collectors",
+        "card2-para": "The Certificate of Expertise (CoE) secure your collection of physical art works with digitally signed documents from world-class experts and art appraisers. Crypto art collectors can issue new cryptographic certificates for older NFT collectibles, backing up digital sources and transaction history from Ethereum ERC721 or ERC1155.",
+        "card3": "Museums",
+        "card3-para": "The Certificates of Inventory (CoI) support conservation of your physical collections, with long term conservation of digital assets as well as dissemination of your collections metadata in a standard and future-proof format."
+    },
+
+    "works": {
+        "heading": "How it works ?",
+        "sec1": "Create account",
+        "sec1-para": "Create your personal account with your artist name. Optionally link your account with your blockchain address.",
+        "sec2": "Upload artwork",
+        "sec2-para": "Upload your high-definition source image for long-term conservation in the Interplanetary File System (IPFS).",
+        "sec3": "Create edition",
+        "sec3-para": "Create your art edition : unique physical original, limited edition or crypto-art / NFTs.",
+        "sec4": "Mint blockchain asset",
+        "sec4-para": "We create for you a unique asset (NFT) in the blockchain and you receive the certificate PDF document to your mailbox.",
+        "sec5": "Secure certificate",
+        "sec5-para": "Physically cut and sign the chirograph to make each certificate unique and send dupplicate copies to our PO Box."
+    },
+
+    "certificate": {
+        "heading":"Certificate and Chirograph",
+        "heading-para":"Our physical certificates are legal documents approved by an IP lawyer, printed in four copies, secured with a quintuplicate chirograph with QRCode and blockchain identifiers.",
+        "Button": "Read more"
+    },
+
+    "about": {
+        "heading":"About Us",
+        "heading-para":"UNCOPIED is a spin-off project of NAMSOR SAS, a French Limited Company based in Versailles, France. Open source code and IPFS infrastructure are maintained by the UNCOPIED Collective."
+    },
+
+    "contact": {
+        "heading": "Get In Touch",
+        "form1": "Name",
+        "form2": "Email",
+        "form3": "Write Message",
+        "button": "Let's talk!"
+    },
+
+    "footer": {
+        "heading1": "Making original truly unique",
+        "heading2": "Useful Links",
+        "heading3": "Follow Us",
+        "heading2-link1": "Home",
+        "heading2-link2": "Blog",
+        "heading2-link3": "Services",
+        "heading2-link4": "Why Uncopied?",
+        "heading2-link5": "Our collective",
+        "heading2-link6": "Contact Us",
+        "copyright": "Copyright © 2021, All Rights Reserved"
+    },
+
+    "error": {
+        "heading":"Sorry, page not found!!!",
+        "button": "Go back"
+    }
+
+}
