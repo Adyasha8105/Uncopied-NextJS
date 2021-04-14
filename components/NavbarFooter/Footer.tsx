@@ -1,0 +1,66 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import styles from './NavbarFooter.module.css'
+import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
+import Image from 'next/image';
+
+export default function Footer(){
+  return (
+    <footer className={styles.footersection}>
+    <div className={`${styles.navspacing} container-fluid`}>
+      <div className={`${styles.footercontent} pt-5 pb-5`}>
+        <div className="row">
+          <div className="col-xl-4 col-lg-4 mb-50">
+            <div className={`${styles.footerwidget} pt-5 pb-5`}>
+              <div className={styles.footerlogo}>
+                <a href="/"><Image src="/logo.png" height={40} width={160} className="img-fluid" alt="logo"/></a>
+              </div>
+              <div className={styles.footertext}>
+              <p>{('footer.heading1')}</p>
+              </div>
+            </div>
+          </div>
+          <div className="col-xl-5 col-lg-4 col-md-6 mb-30">
+            <div className={styles.footerwidget}>
+              <div className={styles.footerwidgetheading}>
+                <h3>{('footer.heading2')}</h3>
+              </div>
+              <ul>
+                <li><a href="/">{('footer.heading2-link1')}</a></li>
+                <li><a href="https://uncopied.art/blog/">{('footer.heading2-link2')}</a></li>
+                <li><a href="https://uncopied.art/about/">{('footer.heading2-link3')}</a></li>
+                <li><a href="https://uncopied.art/about/">{('footer.heading2-link4')}</a></li>
+                <li><a href="https://opencollective.com/uncopied">{('footer.heading2-link5')}</a></li>
+                <li><a href="https://uncopied.art/contact/">{('footer.heading2-link6')}</a></li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-xl-3 col-lg-4 col-md-6 mb-50">
+          <div className={styles.footerwidget}>
+          <div className={styles.footersocialicon}>
+            <span>{('footer.heading3')}</span>
+            <a href="https://twitter.com/uncopied_art"><i className={styles.twitterbg}><FontAwesomeIcon icon={faTwitter} /></i></a>
+            <a href="https://www.facebook.com/uncopied"><i className={styles.facebookbg}><FontAwesomeIcon icon={faFacebook} /></i></a>
+            <a href="https://www.instagram.com/uncopied_art"><i className={styles.instagrambg}><FontAwesomeIcon icon={faInstagram} /></i></a>
+            <a className="last" href="http://github.com/uncopied"><i className={styles.githubbg}><FontAwesomeIcon icon={faGithub} /></i></a>
+          </div>
+          </div>
+         </div>
+        </div>
+      </div>
+    </div>
+    <div className={styles.copyrightarea}>
+      <div className="container">
+        <div className="row">
+          <div className="col-xl-12 col-lg-12 text-center">
+            <div className={styles.copyrighttext}>
+              <p>
+                {('footer.copyright')} <a href="/">Uncopied</a> <br/>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  );
+}
