@@ -15,7 +15,7 @@ body {
   white-space: normal;
 }
 
-body {
+/* body {
   &::-webkit-scrollbar {
     background-color: transparent;
     width: 0px;
@@ -25,7 +25,7 @@ body {
   }
 }
 
-body, .maincontent {
+body .maincontent {
   &::-webkit-scrollbar {
     background-color: transparent;
     width: 2px;
@@ -33,7 +33,7 @@ body, .maincontent {
  &::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
-}
+} */
 
 
 /* Spacing between components */
@@ -131,7 +131,7 @@ body, .maincontent {
 .section2 i {
   justify-content: center;
   font-size: 100px;
-  align-item: center;
+  align-items: center;
 }
 
 .section2 h6 {
@@ -513,7 +513,7 @@ div form button.btn {
   cursor: pointer;
 }
 
-.sidebar ul li: hover{
+.sidebar ul li :hover{
   opacity: 0.5;
 }
 
@@ -559,7 +559,7 @@ div form button.btn {
   }
 }
 
-// Artwork Sources
+/* Artwork Sources */
 
 .artworkSources {
   padding: 30px;
