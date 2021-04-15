@@ -29,14 +29,12 @@
   border-color: #f8f9fa!important;
 }
 
-.lang {
-  border: 2px solid #000;
-  border-radius: 4px;
-  background-color: #f8f9fa;
+.Lang li {
+  list-style: none;
 }
 
-.lang1 {
-  text-align: center;
+.Lang li a {
+  color: #000;
 }
 
 .navspacing {
@@ -209,4 +207,27 @@
 .footermenu li a {
   font-size: 14px;
   color: #878787;
+}
+
+@media screen and (max-device-width: 425px) {
+  .footerwidget ul li {
+    float: none;
+    display: table-header-group;
+  }
+  .footersocialicon i {
+    margin: -2px;
+  }
+}
+
+@media screen and (max-device-width: 400px) {
+  .copyrighttext p,
+  .footerwidget ul li {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-device-width: 400px) {
+  .footerwidget ul li a {
+    font-size: 18px;
+  }
 }

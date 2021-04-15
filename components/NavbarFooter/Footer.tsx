@@ -1,9 +1,11 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './NavbarFooter.module.css'
+import styles from './NavbarFooter.module.css';
+import useTranslation from "next-translate/useTranslation";
 import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
 
 export default function Footer(){
+  const {t} = useTranslation()
   return (
     <footer className={styles.footersection}>
     <div className={`${styles.navspacing} container-fluid`}>
@@ -15,29 +17,29 @@ export default function Footer(){
                 <a href="/"><Image src="/logo.png" height={40} width={160} className="img-fluid" alt="logo"/></a>
               </div>
               <div className={styles.footertext}>
-              <p>{('footer.heading1')}</p>
+              <p>{t('common:footer.heading1')}</p>
               </div>
             </div>
           </div>
           <div className="col-xl-5 col-lg-4 col-md-6 mb-30">
             <div className={styles.footerwidget}>
               <div className={styles.footerwidgetheading}>
-                <h3>{('footer.heading2')}</h3>
+                <h3>{t('common:footer.heading2')}</h3>
               </div>
               <ul>
-                <li><a href="/">{('footer.heading2-link1')}</a></li>
-                <li><a href="https://uncopied.art/blog/">{('footer.heading2-link2')}</a></li>
-                <li><a href="https://uncopied.art/about/">{('footer.heading2-link3')}</a></li>
-                <li><a href="https://uncopied.art/about/">{('footer.heading2-link4')}</a></li>
-                <li><a href="https://opencollective.com/uncopied">{('footer.heading2-link5')}</a></li>
-                <li><a href="https://uncopied.art/contact/">{('footer.heading2-link6')}</a></li>
+                <li><a href="/">{t('common:footer.heading2-link1')}</a></li>
+                <li><a href="https://uncopied.art/blog/">{t('common:footer.heading2-link2')}</a></li>
+                <li><a href="https://uncopied.art/about/">{t('common:footer.heading2-link3')}</a></li>
+                <li><a href="https://uncopied.art/about/">{t('common:footer.heading2-link4')}</a></li>
+                <li><a href="https://opencollective.com/uncopied">{t('common:footer.heading2-link5')}</a></li>
+                <li><a href="https://uncopied.art/contact/">{t('common:footer.heading2-link6')}</a></li>
               </ul>
             </div>
           </div>
           <div className="col-xl-3 col-lg-4 col-md-6 mb-50">
           <div className={styles.footerwidget}>
           <div className={styles.footersocialicon}>
-            <span>{('footer.heading3')}</span>
+            <span>{t('common:footer.heading3')}</span>
             <a href="https://twitter.com/uncopied_art"><i className={styles.twitterbg}><FontAwesomeIcon icon={faTwitter} /></i></a>
             <a href="https://www.facebook.com/uncopied"><i className={styles.facebookbg}><FontAwesomeIcon icon={faFacebook} /></i></a>
             <a href="https://www.instagram.com/uncopied_art"><i className={styles.instagrambg}><FontAwesomeIcon icon={faInstagram} /></i></a>
@@ -54,7 +56,7 @@ export default function Footer(){
           <div className="col-xl-12 col-lg-12 text-center">
             <div className={styles.copyrighttext}>
               <p>
-                {('footer.copyright')} <a href="/">Uncopied</a> <br/>
+                {t('common:footer.copyright')} <a href="/">Uncopied</a> <br/>
               </p>
             </div>
           </div>

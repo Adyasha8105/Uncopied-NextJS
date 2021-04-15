@@ -75,12 +75,12 @@ body .maincontent {
 /* Buttons*/
 
 .btn {
-  font-size: 14px;
+  font-size: 14px !important;
   padding: 10px 30px;
   margin: 5px;
   border-radius: 4px;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 500 !important;
   color: #fff;
   border: none;
   text-transform: uppercase;
@@ -97,14 +97,18 @@ body .maincontent {
   outline: none;
 }
 
+.btn1 {
+  background-color: #000 !important;
+  color: #fff !important;
+}
+
 .btn-common {
-  background-color: #000;
   position: relative;
   z-index: 1;
   box-shadow: 0px 8px 9px 0px rgba(96, 94, 94, 0.17);
   width: 160px;
   height: 50px;
-  padding: 14px 15px;
+  padding: 14px 14px !important;
 }
 
 .btn-common:hover {
@@ -244,6 +248,10 @@ body .maincontent {
   .cards {
     width: 33.3%;
   }
+}
+
+.home-img {
+  padding: 20px !important;
 }
 
 /* Artwork Source */
@@ -394,26 +402,12 @@ div form button.btn {
   .cards .card-title {
     font-size: 23px;
   }
-  .footer-widget ul li a {
-    font-size: 18px;
-  }
   .cards .card-item {
     padding: 30px 15px;
-  }
-  .copyright-text p,
-  .footer-widget ul li {
-    font-size: 16px;
   }
 }
 
 @media screen and (max-device-width: 425px) {
-  .footer-widget ul li {
-    float: none;
-    display: table-header-group;
-  }
-  .footer-social-icon i {
-    margin: -2px;
-  }
   .row {
     text-align: center;
   }

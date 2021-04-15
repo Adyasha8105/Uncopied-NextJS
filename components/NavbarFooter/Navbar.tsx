@@ -13,7 +13,7 @@ export default function NavBar(){
     <Navbar collapseOnSelect bg="light" expand="md" className={styles.navspacing}>
 			<Link href="/">
 				<Navbar.Brand className="font-weight-bold text-muted">
-        <Image src="/logo.svg" height={50} width={160} className="logo" alt="logo"/>
+        <Image src="/logo.svg" height={40} width={130} className="logo" alt="logo"/>
 				</Navbar.Brand>
 			</Link>
       <Navbar.Toggle />
@@ -27,13 +27,13 @@ export default function NavBar(){
                 <Link href="/signup">
                   <Button className={styles.navbut}>{t('common:navbar.signup')}</Button>
                 </Link>
-                <ul>
+                <div className={styles.Lang}>
                   {router.locales.map(locale => (
                     <li key={locale}>
                       <Link href= {router.asPath} locale={locale}><a>{locale}</a></Link>
                     </li>
                   ))}
-                </ul>
+                </div>
 
         </Nav>
         </Navbar.Collapse>
