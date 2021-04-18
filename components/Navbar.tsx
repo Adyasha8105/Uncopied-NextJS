@@ -1,5 +1,5 @@
 import {Navbar, Button, Nav} from 'react-bootstrap';
-import styles from './NavbarFooter.module.css'
+import styles from './Layout.module.css'
 import useTranslation from "next-translate/useTranslation"
 import Image from 'next/image';
 import Link from 'next/link';

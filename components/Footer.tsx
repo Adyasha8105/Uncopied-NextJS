@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './NavbarFooter.module.css';
+import styles from './Layout.module.css';
 import useTranslation from "next-translate/useTranslation";
 import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';

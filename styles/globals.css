@@ -15,17 +15,15 @@ body {
   white-space: normal;
 }
 
-/* body {
-  &::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     background-color: transparent;
     width: 0px;
   }
-  &::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
-}
 
-body .maincontent {
+.maincontent {
   &::-webkit-scrollbar {
     background-color: transparent;
     width: 2px;
@@ -33,7 +31,7 @@ body .maincontent {
  &::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
-} */
+}
 
 
 /* Spacing between components */

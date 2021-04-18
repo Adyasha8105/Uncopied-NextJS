@@ -1,13 +1,9 @@
-import Homepage from '../components/homepage';
-import Navbar from '../components/NavbarFooter/Navbar';
-import Footer from '../components/NavbarFooter/Footer';
+import Layout from '../components/Layout';
 
 export default function Home() {
   return (
     <>
-      <Navbar></Navbar>
-      <Homepage></Homepage>
-      <Footer></Footer>
+       <Layout />
     </>
   )
 }
