@@ -3,7 +3,7 @@ import useTranslation from "next-translate/useTranslation";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenSquare, faHandsHelping, faCertificate, faUserPlus, faImage, faFileCode, faGem, faFileSignature } from '@fortawesome/free-solid-svg-icons';
 
-export default function Home() {
+export default function Homepage() {
   const {t} = useTranslation()
   return (
     <div className="mainhomepage">
