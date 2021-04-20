@@ -18,7 +18,7 @@ function Login()
     function handleLogin()
     {
         setIsLoading(true);
-        const url = process.env.NEXT_APP_UNCOPIED_API + "api/v1.0/auth/login";
+        const url = process.env.NEXT_PUBLIC_UNCOPIED_API + "api/v1.0/auth/login";
 		const headers = {
 			headers: {
                 "Content-Type": "application/json"
