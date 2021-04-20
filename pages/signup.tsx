@@ -1,7 +1,9 @@
-import {useState} from "react"
+import {useState} from "react";
 import Form from "react-bootstrap/Form";
-import Link from 'next/link'
-import { useFormFields } from '../lib/helpers'
+import Link from 'next/link';
+import Image from 'next/image';
+import { useFormFields } from '../lib/helpers';
+import LoaderButton from '../components/LoaderButton';
 import axios from "axios";
 
 function Signup()
@@ -15,7 +17,7 @@ function Signup()
         role:"",
         username:""
     })
-    const [loading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
 
     function handleSignup()
@@ -49,7 +51,9 @@ function Signup()
         <div className="form-container-outer spacing">
           <div className="form-container-inner">
             <div>
-              <img className="embossing" src="../public/embossing.svg" alt="embossing" />
+              <div className="embossing">
+                <Image src="/embossing.svg" width={60} height={60} className="img-fluid" alt="embossing"/>
+              </div>
               <h2 align="center">CREATE YOUR ACCOUNT</h2>
             </div>
             <Form onSubmit={handleSignup}>
@@ -114,7 +118,7 @@ function Signup()
                 </Form.Control>
               </Form.Group>
             By registering, you agree to our <a href="/" target="top">Terms and Conditions</a>.
-            {/* <LoaderButton
+            <LoaderButton
                 block
                 size="lg"
                 type="submit"
@@ -122,7 +126,7 @@ function Signup()
                 isLoading={isLoading}
             >
                 Create account
-            </LoaderButton> */}
+            </LoaderButton>
             </Form>
             <p align="center">
               <Link href="/login">

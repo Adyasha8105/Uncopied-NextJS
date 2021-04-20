@@ -87,12 +87,13 @@ body {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   display: inline-block;
+  box-shadow: none;
 }
 
 .btn:focus,
 .btn:active {
   box-shadow: none;
-  outline: none;
+  outline:0 !important;
 }
 
 .btn1 {
@@ -619,4 +620,13 @@ div form button.btn {
   .artworkSources .btn {
     font-size: 14px;
   }
+}
+
+/* notifiaction */
+
+.notification-container {
+  bottom: 0;
+  left: 0;
+  top: auto !important;
+  margin: 20px;
 }

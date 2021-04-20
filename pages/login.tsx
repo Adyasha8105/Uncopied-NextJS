@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Form from "react-bootstrap/Form";
-import Link from 'next/link'
-import { useFormFields } from '../lib/helpers'
+import Image from 'next/image';
+// import Link from 'next/link'
+import { useFormFields } from '../lib/helpers';
+import { notifySuccess, notifyError } from '../components/Notification';
+import LoaderButton from '../components/LoaderButton';
 import axios from "axios";
 
 function Login()
@@ -10,7 +13,7 @@ function Login()
         username:"",
         password:""
     })
-    const [loading, setIsLoading] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     function handleLogin()
     {
@@ -27,11 +30,13 @@ function Login()
 		})
 		axios.post(url, data, headers).
             then((res) => {
+                notifySuccess("Login Successfull");
                 console.log(res)
                 setIsLoading(false)
 		    })
             .catch((err) => 
             {
+                notifyError("Logged in failed");
                 setIsLoading(false)
                 console.error(err)
 		    })
@@ -39,10 +44,12 @@ function Login()
     return (
         <div className="form-container-outer spacing">
         <div className="form-container-inner">
-            <div>
-                <img className="embossing" src="../public/embossing.svg" alt="embossing" />
-                <h2 align="center">LOG IN TO YOUR ACCOUNT</h2>
+          <div>
+            <div className="embossing">
+              <Image src="/embossing.svg" width={60} height={60} className="img-fluid" alt="embossing"/>
             </div>
+            <h2 align="center">LOG IN TO YOUR ACCOUNT</h2>
+          </div>
             <Form onSubmit={handleLogin}>
                 <Form.Group size="lg" controlId="username">
                     <Form.Label>Username</Form.Label>
@@ -63,14 +70,14 @@ function Login()
                         onChange={handleFieldChange}
                     />
                 </Form.Group>
-                {/* <LoaderButton
+                <LoaderButton
                     block
                     size="lg"
                     type="submit"
                     isLoading={isLoading}
                 >
                     Login
-                </LoaderButton> */}
+                </LoaderButton>
             </Form>
         </div>
     </div>

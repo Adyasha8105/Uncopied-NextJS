@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import { useState } from 'react'
 // import { user } from '../lib/user'
-import Homepage from '../components/Homepage'
+import Homepage from '../components/homepage'
 
 export default function Home() {
 

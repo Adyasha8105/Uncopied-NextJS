@@ -1,19 +1,17 @@
-import { store } from 'react-notifications-component';
+import {NotificationManager} from 'react-notifications';
+ 
+export function notifySuccess(success){
+  return NotificationManager.success(success, 'Success');
+}
 
-export function notify(notification) {
-    const notificationBox = {
-        title: notification.title || " ",
-        message: " ",
-        type: notification.type,
-        insert: "top",
-        container: "top-right",
-        animationIn: ["animate__animated", "animate__fadeIn"],
-        animationOut: ["animate__animated", "animate__fadeOut"],
-        dismiss: {
-          duration: 2000,
-          pauseOnHover: true,
-          onScreen: true
-        }
-      }
-    return store.addNotification(notificationBox);
+export function notifyInfo(info){
+  return NotificationManager.info(info, 'Info');
+}
+
+export function notifyWarning(warning){
+  return NotificationManager.warning(warning, 'Warning');
+}
+
+export function notifyError(error){
+  return NotificationManager.error(error, 'Error');
 }

@@ -207,6 +207,11 @@
   resolved "https://registry.yarnpkg.com/@types/warning/-/warning-3.0.0.tgz#0d2501268ad8f9962b740d387c4654f5f8e23e52"
   integrity sha1-DSUBJorY+ZYrdA04fEZU9fjiPlI=
 
+acorn@6.4.1:
+  version "6.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-6.4.1.tgz#531e58ba3f51b9dacb9a6646ca4debf5b14ca474"
+  integrity sha512-ZVA9k326Nwrj3Cj9jlh3wGFutC2ZornPNARZwsNYqQYgN0EsV2d53w5RN/co65Ohn4sUAUtb1rSUAOD6XN9idA==
+
 anser@1.4.9:
   version "1.4.9"
   resolved "https://registry.yarnpkg.com/anser/-/anser-1.4.9.tgz#1f85423a5dcf8da4631a341665ff675b96845760"
@@ -500,7 +505,7 @@ classnames@2.2.6:
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.2.6.tgz#43935bffdd291f326dad0a205309b38d00f650ce"
   integrity sha512-JR/iSQOSt+LQIWwrwEzJ9uk0xfN3mTVYMwt1Ir5mUcSN6pU+V4zQFFaJsclJbPuAUQH+yfWef6tm7l1quW3C8Q==
 
-classnames@^2.2.6:
+classnames@^2.1.1, classnames@^2.2.6:
   version "2.3.1"
   resolved "https://registry.yarnpkg.com/classnames/-/classnames-2.3.1.tgz#dfcfa3891e306ec1dad105d0e88f4417b8535e8e"
   integrity sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA==
@@ -1700,6 +1705,16 @@ react-notifications-component@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/react-notifications-component/-/react-notifications-component-3.1.0.tgz#c676b7897a3fb10c554b69dba25fe2a9da6170e2"
   integrity sha512-qq+zgqVIa2zhlw+RvO2QSPk7xHLvZWTHl9VKRO56sMUef/UrcUTqOswL0DSJtRIpZYZhclquQUfDxD6H2w8aWA==
+
+react-notifications@^1.7.2:
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/react-notifications/-/react-notifications-1.7.2.tgz#e70e2c053f86321c0a7fa81ff638922e2fdd572f"
+  integrity sha512-3mlMiNLDQtp64IP+EnYx3xgmbdpzrLQiSO8AP+8o4LiYQC6HcgdVB+MMdGuYZ1ttfKeLgTgol2ESFQJhmz0O3Q==
+  dependencies:
+    acorn "6.4.1"
+    classnames "^2.1.1"
+    prop-types "^15.5.10"
+    react-transition-group "^4.4.1"
 
 react-overlays@^5.0.0:
   version "5.0.0"
