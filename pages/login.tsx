@@ -15,8 +15,9 @@ function Login()
     })
     const [isLoading, setIsLoading] = useState(false);
 
-    function handleLogin()
-    {
+    function handleLogin(e)
+    { 
+        e.preventDefault();
         setIsLoading(true);
         const url = process.env.NEXT_PUBLIC_UNCOPIED_API + "api/v1.0/auth/login";
 		const headers = {

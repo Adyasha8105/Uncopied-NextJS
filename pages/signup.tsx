@@ -20,8 +20,9 @@ function Signup()
     const [isLoading, setIsLoading] = useState(false);
 
 
-    function handleSignup()
+    function handleSignup(e)
     {
+        e.preventDefault();
         setIsLoading(true)
         const url = process.env.NEXT_APP_UNCOPIED_API + "api/v1.0/auth/register";
         const data = JSON.stringify({
