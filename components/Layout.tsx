@@ -1,13 +1,12 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
-import Homepage from './Homepage'
 
-function Layout() {
+function Layout({user, children}) {
   return (
     <>
-      <Navbar />
+      <Navbar user={user} />
       <main>
-          <Homepage />
+          {children}
       </main>
       <Footer />
 
