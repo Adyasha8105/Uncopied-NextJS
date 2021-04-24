@@ -72,6 +72,10 @@ body {
 
 /* Buttons*/
 
+.error{
+  color: red;
+  font: 1rem;;
+}
 .btn {
   font-size: 14px !important;
   padding: 10px 30px;

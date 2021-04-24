@@ -4,6 +4,11 @@
   animation: spin 1s infinite linear;
 }
 
+.LoaderButton:disabled {
+  background-color: rgb(139, 139, 139) !important;
+  color: black;
+}
+
 @keyframes spin {
   from {
     transform: scale(1) rotate(0deg);

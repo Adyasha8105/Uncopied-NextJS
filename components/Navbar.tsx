@@ -4,7 +4,7 @@ import useTranslation from "next-translate/useTranslation"
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function NavBar({user}){
+export default function NavBar(){
   const {t} = useTranslation()
 
   return (
@@ -17,10 +17,10 @@ export default function NavBar({user}){
       <Navbar.Toggle />
       <Navbar.Collapse className="justify-content-end">
         <Nav>  
-          <Link href="/login">
+          <Link href="/auth/sign-in">
             <Button className={styles.navbut}>{t('common:navbar.login')}</Button>
           </Link>
-          <Link href="/signup">
+          <Link href="/auth/sign-up">
             <Button className={styles.navbut}>{t('common:navbar.signup')}</Button>
           </Link>
         </Nav>

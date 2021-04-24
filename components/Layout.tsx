@@ -1,10 +1,10 @@
 import Navbar from './Navbar'
 import Footer from './Footer'
 
-function Layout({user, children}) {
+function Layout({children}) {
   return (
     <>
-      <Navbar user={user} />
+      <Navbar />
       <main>
           {children}
       </main>
@@ -14,4 +14,11 @@ function Layout({user, children}) {
   )
 }
 
+function Error({children})
+{
+  return (<span className="error">{children}</span>)
+}
+
+
 export default Layout
+export {Error}

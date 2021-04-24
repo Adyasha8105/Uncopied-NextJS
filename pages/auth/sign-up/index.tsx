@@ -2,11 +2,12 @@ import {useState} from "react";
 import Form from "react-bootstrap/Form";
 import Link from 'next/link';
 import Image from 'next/image';
-import { useFormFields } from '../lib/helpers';
-import LoaderButton from '../components/LoaderButton';
-import axios from "axios";
 
-function Signup()
+import { useFormFields } from '../../../lib/hooks/formHook';
+import LoaderButton from '../../../components/LoaderButton';
+import {signup} from '../../../services/api/auth'
+
+const Signup: React.FC = () =>
 {
     const [fields, handleFieldChange] = useFormFields({
         display_name: "",
@@ -19,12 +20,15 @@ function Signup()
     })
     const [isLoading, setIsLoading] = useState(false);
 
-
-    function handleSignup()
+    function handleSignup(event)
     {
+        if(event)
+        {
+            event.preventDefault();
+        }
         setIsLoading(true)
-        const url = process.env.NEXT_APP_UNCOPIED_API + "api/v1.0/auth/register";
-        const data = JSON.stringify({
+        
+        const data = {
             display_name: fields.display_name,
             email:fields.email,
             language: fields.language,
@@ -32,15 +36,12 @@ function Signup()
             phone: fields.phone,
             role: fields.role,
             username: fields.username
-        });
-        const headers = {
-            headers: {"Content-Type": "application/json"}
         }
 
         //sending request
-        axios.post(url, data, headers )
+        signup(data)
             .then(res => {
-                console.log("Hi");
+                
             })
             .catch(err => {
                 console.error(err);
