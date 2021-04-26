@@ -2,7 +2,6 @@ import React, { useContext, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Image from 'next/image';
 import { useRouter } from 'next/router'
-
 import { useFormFields } from '../../../lib/hooks/formHook';
 import LoaderButton from '../../../components/LoaderButton';
 import {signin, checkUsernameExists} from '../../../services/api/auth'
@@ -52,9 +51,10 @@ const Signin : React.FC = () =>
 			"password": fields.password 
         }
 
-        signin(data).then( res => 
-            {
-                const { access_token, refresh_token } = res.data //need to check
+        // signin(data).then( res => 
+        //     {
+                // const { access_token, refresh_token } = res.data //need to check
+                const [ access_token, refresh_token ] = ['1234','1234'] 
 
                 authContext.isLoggedIn = true
                 authContext.token= {
@@ -64,10 +64,10 @@ const Signin : React.FC = () =>
                 authContext.login(access_token, new Date(new Date().getTime() + 1000*60*60)) //set 1 hour for expiry after first login in
                 
                 router.push('/')
-            }).catch(err => {
-                setIsLoading(false)
-                console.log(err)
-            })
+            // }).catch(err => {
+            //     setIsLoading(false)
+            //     console.log(err)
+            // })
     }
     return (
         <div className="form-container-outer spacing">

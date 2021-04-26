@@ -7,16 +7,6 @@ import { NotificationContainer } from 'react-notifications';
 import {AuthProvider} from '../lib/hooks/authHook'
 
 function MyApp({ Component, pageProps }) {
-  // const [token, setToken] = useState(null)
-  
-  // const login = () => {
-  //   setToken(token)
-  // }
-
-  // const logout = () => {
-  //   setToken(null)
-  // }
-
   return (
   <>
   <AuthProvider>

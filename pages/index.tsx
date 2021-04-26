@@ -1,7 +1,7 @@
 import Layout from '../components/Layout'
 import { useContext, useState } from 'react'
 
-import Homepage from '../components/homepage'
+import Homepage from '../components/Homepage'
 import { AuthContext } from '../lib/context/authContext'
 import ProtectedHomepage from '../components/ProtectedHomepage'
 
