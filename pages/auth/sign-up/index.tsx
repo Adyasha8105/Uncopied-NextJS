@@ -6,6 +6,8 @@ import Image from 'next/image';
 import { useFormFields } from '../../../lib/hooks/formHook';
 import LoaderButton from '../../../components/LoaderButton';
 import {signup} from '../../../services/api/auth'
+import { useRouter } from "next/router";
+import { notifyError } from "../../../components/Notification";
 
 const Signup: React.FC = () =>
 {
@@ -19,6 +21,7 @@ const Signup: React.FC = () =>
         username:""
     })
     const [isLoading, setIsLoading] = useState(false);
+    const router = useRouter()
 
     function handleSignup(event)
     {
@@ -41,10 +44,14 @@ const Signup: React.FC = () =>
         //sending request
         signup(data)
             .then(res => {
-                
+                notifyError("Successfully Signed Up")
+                router.push('/auth/sign-in')
             })
             .catch(err => {
+                setIsLoading(false);
                 console.error(err);
+                console.log(err.response);
+                console.log(JSON.stringify(err));
             })
     }
 
@@ -65,15 +72,17 @@ const Signup: React.FC = () =>
                 type="text"
                 value={fields.username}
                 onChange={handleFieldChange}
+                required
                 />
               </Form.Group>
-              <Form.Group controlId="displayName" size="lg">
+              <Form.Group controlId="display_name" size="lg">
                 <Form.Label>Display Name</Form.Label>
                 <Form.Control
                 autoFocus
                 type="text"
                 value={fields.display_name}
                 onChange={handleFieldChange}
+                required
                 />
               </Form.Group>
               <Form.Group controlId="email" size="lg">
@@ -83,36 +92,39 @@ const Signup: React.FC = () =>
                 type="email"
                 value={fields.email}
                 onChange={handleFieldChange}
+                required
                 />
               </Form.Group>
               <Form.Group controlId="password" size="lg">
                 <Form.Label>Password</Form.Label>
                 <Form.Control
                   type="password"
+                  autoComplete='true'
                   value={fields.password}
                   onChange={handleFieldChange}
+                  required
                 />
               </Form.Group>
-              <Form.Group controlId="password" size="lg">
+              <Form.Group controlId="language" size="lg">
                 <Form.Label>Language</Form.Label>
-                <Form.Control as="select" onChange={handleFieldChange} value={fields.language} >
-                  <option value="en">English</option>
-                  <option value="fr">French</option>
+                <Form.Control as="select" onChange={handleFieldChange} value={fields.language} required>
+                  <option value="EN" defaultValue>English</option>
+                  <option value="FR">French</option>
                 </Form.Control>
               </Form.Group>
-              <Form.Group controlId="password" size="lg">
+              <Form.Group controlId="phone" size="lg">
                 <Form.Label>Phone</Form.Label>
                 <Form.Control
                 autoFocus
-                type="number"
+                type="tel"
                 value={fields.phone}
                 onChange={handleFieldChange}
                 />
               </Form.Group>
               <Form.Group controlId="role">
                 <Form.Label>Role</Form.Label>
-                <Form.Control as="select" onChange={handleFieldChange} value={fields.role} >
-                  <option value="artist">Artist</option>
+                <Form.Control as="select" onChange={handleFieldChange} value={fields.role} required>
+                  <option value="artist" defaultValue>Artist</option>
                   <option value="collector">Collector</option>
                   <option value="museum">Museum</option>
                   <option value="other">Other</option>

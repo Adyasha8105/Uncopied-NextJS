@@ -1,14 +1,20 @@
 import Layout from '../components/Layout'
-import { useState } from 'react'
-// import { user } from '../lib/user'
+import { useContext, useState } from 'react'
+
 import Homepage from '../components/homepage'
+import { AuthContext } from '../lib/context/authContext'
+import ProtectedHomepage from '../components/ProtectedHomepage'
 
 export default function Home() {
 
   const [user, useUser] = useState(null)
+  const authContext = useContext(AuthContext)
+
+  console.log(authContext);
   return (
     <>
-        {!user && (<Homepage></Homepage>)}
+        {!authContext.isLoggedIn && (<Homepage>{authContext}</Homepage>)}
+        {authContext.isLoggedIn && <ProtectedHomepage></ProtectedHomepage>}
     </>
   )
 }

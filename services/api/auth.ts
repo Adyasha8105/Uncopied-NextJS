@@ -7,12 +7,14 @@ import { HEADERS } from '../../datatype/constant'
 
 const signup = (payload: signupData) : Promise<AxiosResponse> => 
 {
-    return axios.post(SIGNUP_URL, payload, HEADERS)
+    const data = JSON.stringify(payload)
+    return axios.post(SIGNUP_URL, data, HEADERS)
 }
 
 const signin = (payload: signinData) : Promise<AxiosResponse> =>
 {
-    return axios.post(SIGNIN_URL, payload, HEADERS)
+    const data = JSON.stringify(payload)
+    return axios.post(SIGNIN_URL, data, HEADERS)
 }
 
 const checkUsernameExists = (username: string) : Promise<AxiosResponse> => {

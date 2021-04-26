@@ -1,6 +1,6 @@
-const SIGNIN_URL = '/auth/sign-in'
-const SIGNUP_URL = '/auth/sign-up'
-const CHECK_USERNAME_URL = '/auth/available/username'
+const SIGNIN_URL = 'http://api.uncopied.io'+'/auth/sign-in'
+const SIGNUP_URL = "http://api.uncopied.io/auth/sign-up"
+const CHECK_USERNAME_URL = 'http://api.uncopied.io'+'/auth/available/username'
 
 export {
     SIGNIN_URL,

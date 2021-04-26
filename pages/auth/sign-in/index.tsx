@@ -17,11 +17,13 @@ const Signin : React.FC = () =>
     })
     const [isLoginAllowed, setisLoginAllowed] = useState(true)
     const [isLoading, setIsLoading] = useState(false)
-    const [error, setError] = useState('');
+    const [error, setError] = useState('')
     const authContext = useContext(AuthContext)
     const router = useRouter()
 
-
+    const onUsernameFocus = () => {
+        setError('')
+    }
     const checkUsernameAvailability = () =>
     {
         setError('')
@@ -38,10 +40,6 @@ const Signin : React.FC = () =>
         })
     }
 
-    const onUsernameFocus = () => {
-        setError('')
-    }
-
     const handleLogin = (event) =>
     {
         if(event)
@@ -53,11 +51,18 @@ const Signin : React.FC = () =>
 			"username": fields.username,
 			"password": fields.password 
         }
-        console.log("Hi");
+
         signin(data).then( res => 
             {
-                const { token } = res.data 
-                // authContext.login("12345",new Date())
+                const { access_token, refresh_token } = res.data //need to check
+
+                authContext.isLoggedIn = true
+                authContext.token= {
+                    "access_token": access_token,
+                    "refresh_token": refresh_token
+                }
+                authContext.login(access_token, new Date(new Date().getTime() + 1000*60*60)) //set 1 hour for expiry after first login in
+                
                 router.push('/')
             }).catch(err => {
                 setIsLoading(false)
@@ -82,7 +87,7 @@ const Signin : React.FC = () =>
                         required
                         autoFocus
                         // onBlur={checkUsernameAvailability}
-                        // onFocus={onUsernameFocus}
+                        onFocus={onUsernameFocus}
                         type="username"
                         value={fields.username}
                         onChange={handleFieldChange}
@@ -93,6 +98,7 @@ const Signin : React.FC = () =>
                     <Form.Control
                         required
                         type="password"
+                        autoComplete='true'
                         value={fields.password}
                         onChange={handleFieldChange}
                     />
@@ -113,3 +119,4 @@ const Signin : React.FC = () =>
     )
 }
 export default Signin;
+
