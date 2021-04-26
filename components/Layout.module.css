@@ -31,10 +31,26 @@
 
 .Lang li {
   list-style: none;
+  display: inline;
 }
 
-.Lang li a {
-  color: #000;
+.Lang li Button {
+  color: #b0acac;
+  background: #202020;
+  border-color: #202020;
+}
+
+.Lang li Button:hover{
+  opacity: 0.8;
+  background-color: #202020 !important;
+  border-color: #202020;
+}
+
+.Lang li Button:focus {
+  background-color: #202020 !important;
+  border-color: #202020;
+  box-shadow: none;
+  outline: 0 !important;
 }
 
 .navspacing {

@@ -1,26 +1,40 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import styles from './NavbarFooter.module.css';
+import {Button} from 'react-bootstrap';
+import styles from './Layout.module.css';
 import useTranslation from "next-translate/useTranslation";
 import { faTwitter, faFacebook, faInstagram, faGithub } from '@fortawesome/free-brands-svg-icons';
 import Image from 'next/image';
+import Link from 'next/link';
+import { useRouter } from "next/router";
 
 export default function Footer(){
   const {t} = useTranslation()
+  const router = useRouter()
+
   return (
     <footer className={styles.footersection}>
     <div className={`${styles.navspacing} container-fluid`}>
       <div className={`${styles.footercontent} pt-5 pb-5`}>
         <div className="row">
           <div className="col-xl-4 col-lg-4 mb-50">
-            <div className={`${styles.footerwidget} pt-5 pb-5`}>
+            <div className={`${styles.footerwidget} pb-5`}>
               <div className={styles.footerlogo}>
                 <a href="/"><Image src="/logo.png" height={40} width={160} className="img-fluid" alt="logo"/></a>
               </div>
               <div className={styles.footertext}>
               <p>{t('common:footer.heading1')}</p>
               </div>
+
+              <div className={styles.Lang}>
+                  {router.locales.map(locale => (
+                   <li key={locale}>
+                    <Link href= {router.asPath} locale={locale}><Button>{locale}</Button></Link>
+                   </li>
+                  ))}
+              </div>
+
             </div>
-          </div>
+          </div>         
           <div className="col-xl-5 col-lg-4 col-md-6 mb-30">
             <div className={styles.footerwidget}>
               <div className={styles.footerwidgetheading}>

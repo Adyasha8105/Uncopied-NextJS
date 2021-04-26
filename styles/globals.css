@@ -15,17 +15,15 @@ body {
   white-space: normal;
 }
 
-/* body {
-  &::-webkit-scrollbar {
+  ::-webkit-scrollbar {
     background-color: transparent;
     width: 0px;
   }
-  &::-webkit-scrollbar-thumb {
+  ::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
-}
 
-body .maincontent {
+.maincontent {
   &::-webkit-scrollbar {
     background-color: transparent;
     width: 2px;
@@ -33,7 +31,7 @@ body .maincontent {
  &::-webkit-scrollbar-thumb {
     background-color: transparent;
   }
-} */
+}
 
 
 /* Spacing between components */
@@ -74,6 +72,10 @@ body .maincontent {
 
 /* Buttons*/
 
+.error{
+  color: red;
+  font: 1rem;;
+}
 .btn {
   font-size: 14px !important;
   padding: 10px 30px;
@@ -89,12 +91,13 @@ body .maincontent {
   -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   display: inline-block;
+  box-shadow: none;
 }
 
 .btn:focus,
 .btn:active {
   box-shadow: none;
-  outline: none;
+  outline:0 !important;
 }
 
 .btn1 {
@@ -621,4 +624,13 @@ div form button.btn {
   .artworkSources .btn {
     font-size: 14px;
   }
+}
+
+/* notifiaction */
+
+.notification-container {
+  bottom: 0;
+  left: 0;
+  top: auto !important;
+  margin: 20px;
 }

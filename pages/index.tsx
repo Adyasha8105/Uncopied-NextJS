@@ -1,13 +1,20 @@
-import Homepage from '../components/homepage';
-import Navbar from '../components/NavbarFooter/Navbar';
-import Footer from '../components/NavbarFooter/Footer';
+import Layout from '../components/Layout'
+import { useContext, useState } from 'react'
+
+import Homepage from '../components/homepage'
+import { AuthContext } from '../lib/context/authContext'
+import ProtectedHomepage from '../components/ProtectedHomepage'
 
 export default function Home() {
+
+  const [user, useUser] = useState(null)
+  const authContext = useContext(AuthContext)
+
+  console.log(authContext);
   return (
     <>
-      <Navbar></Navbar>
-      <Homepage></Homepage>
-      <Footer></Footer>
+        {!authContext.isLoggedIn && (<Homepage>{authContext}</Homepage>)}
+        {authContext.isLoggedIn && <ProtectedHomepage></ProtectedHomepage>}
     </>
   )
 }
